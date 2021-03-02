@@ -1,3 +1,5 @@
+from content.sentences import sent_dict
+
 def update_owner(board_dict, curr_p, other_p, pos, N):
   """
   Compare current card with the neighboring cards to see if cards change owners.
@@ -115,7 +117,7 @@ def standard_compare(board_dict, pos, neighbor_pos_dict, curr_p, other_p):
     total_difference += compare_value(curr_card, neighbor_card, rel_pos)
     
   if total_difference > 0:
-    print("\nThis is a winning choice!")
+    print(sent_dict['winning_move'])
     # We will change all cards to curr_p (set to 1) from other_p (set to 0)
     for rel_pos, abs_pos in neighbor_pos_dict.items():
       if other_p.won_cards_pos[abs_pos] == 0:
@@ -128,7 +130,7 @@ def standard_compare(board_dict, pos, neighbor_pos_dict, curr_p, other_p):
       other_p.won_cards_pos[pos] = 0
 
   elif total_difference < 0:
-    print("\nThis is a losing choice!")
+    print(sent_dict['losing_move'])
     # We will change all cards from curr_p (set to 0) to other_p (set to 1)
     for rel_pos, abs_pos in neighbor_pos_dict.items():
       if other_p.won_cards_pos[abs_pos] == 0:
@@ -141,7 +143,7 @@ def standard_compare(board_dict, pos, neighbor_pos_dict, curr_p, other_p):
       other_p.won_cards_pos[pos] = 1
 
   else: # draw
-    print("\nThis is a normal choice!")
+    print(sent_dict['normal_move'])
     # only update our card
     curr_p.won_cards_pos[pos] = 1
     other_p.won_cards_pos[pos] = 0

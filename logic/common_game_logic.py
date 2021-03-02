@@ -23,7 +23,7 @@ def coin_toss(p1, p2):
   INPUT:  <p1>, <p2> are both class object Player
   OUTPUT: <p1> or <p2>
   """
-  flip = random.randint(0,2)    # 2 possible outcomes,
+  flip = random.randint(0,1)    # 2 possible outcomes,s
   if flip == 0:
     print(p1.name + ' starts first!\n\n')   # each outcome is assigned to a player
     return p1
