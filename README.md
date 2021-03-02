@@ -51,6 +51,6 @@
 ## 4. Strengths:
 - `content` and `logic` are stored in different folders so different teammates can work separately easily.
 - all functions are kept as modularized as possible.
-- hardcode are minimized so our game can be easily scaled up to bigger board, more cards or more players.
+- hardcodes are minimized so our game can be easily scaled up to bigger board, more cards or more players.
 
 
