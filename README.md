@@ -43,7 +43,7 @@
 ![](https://i.imgur.com/KMFdYbM.png)
 - After placing your card, the display of the board will be printed on the screen:<br>
 ![](https://i.imgur.com/ybMQYzc.png)
-- Our logic will then evaluate whether your move is `winning`, `losing` or `normal` to change the card owner after every move:
+- Our logic will then evaluate whether your move is `winning`, `losing` or `normal` to change the card owner after every move:<br>
 ![](https://i.imgur.com/MsPfSgN.png)
 - `NPC` will randomly place card during his turn.
 - Continue to play until the whole board is filled. 
